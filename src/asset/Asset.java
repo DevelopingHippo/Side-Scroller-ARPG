@@ -32,10 +32,12 @@ public class Asset {
 
 
     public void update() {
-
+        System.out.println("Updating Asset");
     }
 
-    public void draw(Graphics2D g2) {
 
+
+    public void draw(Graphics2D g2) {
+        System.out.println("Drawing Asset");
     }
 }
