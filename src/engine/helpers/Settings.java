@@ -4,7 +4,8 @@ public class Settings {
 
 
 
-    public int fps = 144;
+    public int renderFPS = 144;
+    public int engineFPS = 60;
 
     public String backgroundColor = "#3B8FCA";
 
@@ -19,7 +20,7 @@ public class Settings {
 
     public boolean debug = false;
 
-    public int playerDefaultWorldX = 24, playerDefaultWorldY = 11;
+    public int playerDefaultWorldX = 22, playerDefaultWorldY = 28;
     public int playerDefaultMoveSpeed = 1;
     public int playerSprintSpeed = 2;
 

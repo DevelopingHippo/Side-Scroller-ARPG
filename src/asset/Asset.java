@@ -11,14 +11,11 @@ public class Asset {
     public int worldX = 0, worldY = 0;
     public Rectangle collisionBox;
     public int collisionBoxDefaultX, collisionBoxDefaultY;
-
     public int particlesGenerated = 0;
     public int maxParticles = 10;
     public int particleLockCount = 0;
     public boolean particleGenerated = false;
-
-
-    private final ReferenceList ref;
+    public final ReferenceList ref;
     public Asset(ReferenceList ref) {
         this.ref = ref;
     }

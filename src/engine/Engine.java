@@ -16,8 +16,6 @@ public class Engine {
     }
 
 
-
-
     public void setup() {
 //        ref.assetManager.spawnAsset("Old Man", 27, 13);
 //        ref.assetManager.spawnAsset("Door", 11, 27);
@@ -31,7 +29,7 @@ public class Engine {
 
 
     public void update() {
-        //ref.player.update();
+        ref.player.update();
 
 //        for(Asset asset : ref.assetManager.getAllAssets()){
 //            if(asset != null) {

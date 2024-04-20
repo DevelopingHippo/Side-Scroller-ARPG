@@ -18,9 +18,21 @@ public class DynamicEntity extends Asset {
     public int spriteNum = 1;
     public int spriteCounter = 0;
     public int spriteFrameTime = 36;
+    public boolean collisionOn = false;
 
     public DynamicEntity(ReferenceList ref) {
         super(ref);
+    }
+
+    public void animationFrames() {
+        spriteCounter++;
+        if (spriteCounter > spriteFrameTime) {
+            if(spriteNum == 4){
+                spriteNum = 0;
+            }
+            spriteNum++;
+            spriteCounter = 0;
+        }
     }
 
 

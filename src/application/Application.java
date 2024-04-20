@@ -30,19 +30,25 @@ public class Application extends JPanel implements Runnable  {
 
     @Override
     public void run() {
-        double drawInterval = (double) 1000000000 / ref.settings.fps;
-        double delta = 0;
+        double renderDrawInterval = (double) 1000000000 / ref.settings.renderFPS;
+        double engineDrawInterval = (double) 1000000000 / ref.settings.engineFPS;
+        double engineDelta = 0;
+        double renderDelta = 0;
         long lastTime = System.nanoTime();
         long currentTime;
 
         while(applicationThread != null) {
             currentTime = System.nanoTime();
-            delta += (currentTime - lastTime) / drawInterval;
+            renderDelta += (currentTime - lastTime) / renderDrawInterval;
+            engineDelta += (currentTime - lastTime) / engineDrawInterval;
             lastTime = currentTime;
-            if(delta >= 1) {
-                ref.engine.update();
+            if(renderDelta >= 1) {
                 repaint();
-                delta--;
+                renderDelta--;
+            }
+            if(engineDelta >= 1) {
+                ref.engine.update();
+                engineDelta--;
             }
         }
     }

@@ -22,7 +22,6 @@ public class Renderer {
     public void render(Graphics2D g2) {
         ref.tileManager.draw(g2);
 
-
         // Add Assets to Render List
 //        for(Asset asset : ref.assetManager.getAllAssets()) {
 //            if(asset != null){
@@ -40,9 +39,7 @@ public class Renderer {
 
         ref.player.draw(g2);
         ref.ui.draw(g2);
-
         renderAssetList.clear();
-
         g2.dispose();
     }
 }
